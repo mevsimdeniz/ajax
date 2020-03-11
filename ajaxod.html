@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #getir{
+            color: lawngreen;
+            font-size: inherit ;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <ul id="kullanicilar"></ul>
+
+    <button id="getir">Kullanıcı Bilgileri</button>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/alertifyjs/build/alertify.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#getir').on('click', function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/users",
+                    method: "GET",
+                    type: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        $.each(data, function (i,element) {
+                            var li = document.createElement('li');
+                            li.innerText = element.name + '(' + element.address.city + ')';
+                            $('#kullanicilar').append(li);
+
+                        });
+                        console.log(data[0].city);
+
+                    },
+
+                  
+                })
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

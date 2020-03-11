@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .user {
+            float: left;
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            border: 1px solid rgb(0, 0, 0);
+            list-style-type: none;
+
+            padding: 8px;
+            background-image: linear-gradient(to bottom right, rgba(66, 224, 216, 0), rgb(12, 0, 14));
+
+        }
+
+        #name {
+            font-style: italic;
+            padding: initial;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(180, 96, 65);
+
+        }
+
+        .btn {
+            font-size: 10px;
+            color: rgb(205, 63, 110);
+            background-color: rgb(0, 255, 128);
+            border-radius: 10px;
+            width: 100%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/alertifyjs/build/alertify.min.js"></script>
+
+
+    <ul class="kisi">
+        <li class="user">
+            <h2 id="name">Türkay</h2>
+            <hr />
+            <ul>
+                <li>KES</li>
+                <li>MAİL</li>
+
+                <li>ADDRESS <button class="btn">GİZLE/GÖSTER</button>
+                    <ul>
+                        <li>suite</li>
+                        <li>city</li>
+                        <li>number</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            var user = {
+                name: 'Mevsim Deniz',
+                username: 'İsis',
+                email: 'mdnzarslan@gmail.com',
+                address: {
+                    suite: 'ziverbey',
+                    city: 'istanbul',
+                    number: '4'
+                }
+            };
+           
+            var user2 = {
+                name: 'Cengiz  Deniz',
+                username: 'CDZ',
+                email: 'cgz@gmail.com',
+                address: {
+                    suite: 'ksk',
+                    city: 'izmir',
+                    number: '3'
+                }
+            };
+
+            var user3 = {
+                name: 'derya  Deniz',
+                username: 'hermes',
+                email: 'hms@gmail.com',
+                address: {
+                    suite: 'kadıköy',
+                    city: 'anadolu',
+                    number: '4'
+                }
+            };
+
+            var users = [user, user2, user3];
+            ekrandaGoster(users);
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users",
+                method: "GET",
+                type: 'json',
+                success:ekrandaGoster
+
+
+            });
+
+
+
+            function ekrandaGoster(users) {
+                for (let index = 0; index < users.length; index++) {
+                    const user = users[index];
+
+                    var li = $('<li></li>');
+                    li.addClass('user')
+                    var h2 = $('<h2></h2>');
+                    h2.text(user.name);
+                    var hr = $('<hr></hr>');
+                    var ul = $('<ul></ul>');
+
+                    var liUserName = $('<li></li>');
+                    liUserName.text(user.liUserName);
+                    var limail = $('<li></li>');
+                    limail.text(user.email);
+                    var liAdres = $('<li></li>');
+                    liAdres.text('ADDRESS');
+                    var button = $('<li></li>');
+                    liAdres.add(button);
+                    var uladres = $('<ul></ul>');
+
+                    var liSuite = $('<li></li>');
+                    liSuite.text(user.address.suite);
+                    var liCtiy = $('<li></li>');
+                    liCtiy.text(user.address.city);
+                    var liNumber = $('<li></li>');
+                    liNumber.text(user.address.number);
+
+                    uladres.append(liSuite);
+                    uladres.append(liCtiy);
+                    uladres.append(liNumber);
+
+                    liAdres.append(uladres);
+
+                    ul.append(liUserName);
+                    ul.append(limail);
+                    ul.append(liAdres);
+                    li.append(h2);
+                    li.append(hr);
+                    li.append(ul);
+                    $('.kisi').append(li);
+                }
+            }
+
+
+        });
+    </script>
+
+</body>
+
+</html>

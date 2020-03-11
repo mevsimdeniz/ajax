@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bilet{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/alertifyjs/build/alertify.min.js"></script>
+
+    <button id="goster">Bileti Görmek için tıkla</button>
+    <div id="bilet" data-fiyat="100">
+        <h2>Bilet Detayları</h2>
+        <label for="textAdet"> Adet:</label>
+        <input type="number" id="textAdet" />
+        <span id="toplam"></span>
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#textAdet').on('keypress', tutarHesapla);
+            $('#textAdet').on('change', tutarHesapla);
+
+            $('#goster').on('click',function(){
+                $('#bilet').fadeToggle();
+
+            });
+
+            function tutarHesapla() {
+                let fiyat = +$('#bilet').data('fiyat');
+                let adet = +$(this).val();
+                let sonuc = fiyat * adet;
+                $('#toplam').text(sonuc);
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>

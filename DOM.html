@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.cssS">
+    <link rel="stylesheet" href="./node_modules/alertifyjs/build/css/alertify.min.css">
+    <style>
+        .egitimler {
+            list-style: none;
+        }
+
+        .egitim {
+            float: left;
+            width: 150px;
+            height: 300px;
+            border-radius: 20px;
+            border: 1px solid black;
+            background-color: yellowgreen;
+            padding: 8px;
+            margin: 15px;
+        }
+
+        .secili {
+            float: left;
+            width: 150px;
+            height: 300px;
+            border-radius: 20px;
+            border: 1px solid black;
+            background-color: rgb(205, 50, 122);
+            padding: 8px;
+            margin: 15px;
+        }
+
+        button {
+            background-color: tomato;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .yorumlar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filtre">
+        <button class="aktif">Açılacak Eğitimler</button>
+        <button class="pasif">Geçmiş Eğitimler</button>
+    </div>
+    <ul class="egitimler">
+        <li class="egitim aktif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+        <li class="egitim aktif" data-fiyat="500">
+            <h2>C# Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+        <li class="egitim pasif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+        <li class="egitim aktif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+        <li class="egitim pasif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+
+        <li class="egitim aktif" data-fiyat="250">
+            <h2>JQuery Eğitimi</h2>
+            <button>Fiyatı Göster</button>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+
+        </li>
+        <li class="egitim pasif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+        <li class="egitim pasif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+        <li class="egitim aktif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+        <li class="egitim aktif" data-fiyat="500">
+            <h2>JQuery Eğitimi</h2>
+            <p>
+                JQuery ile dinamik html sayfaları olşturmayı öğrenin!
+            </p>
+            <a href="#">Yorumlar</a>
+            <ul class="yorumlar">
+                <li>Mükammel</li>
+                <li>Harika</li>
+            </ul>
+            <button>Fiyatı Göster</button>
+        </li>
+
+    </ul>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/alertifyjs/build/alertify.min.js"></script>
+   <script src="dom.js"></script>
+</body>
+
+</html>

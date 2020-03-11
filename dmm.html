@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.cssS">
+    <link rel="stylesheet" href="./node_modules/alertifyjs/build/css/alertify.min.css">
+    <style>
+        .educations {
+            list-style: none;
+        }
+
+        .education {
+            float: left;
+            width: 150px;
+            height: 300px;
+            border-radius: 10px;
+            border: 5px solid purple;
+            background-color: salmon;
+            padding: 18px;
+            margin: 20px;
+
+        }
+
+        .selected {
+            float: right;
+            width: 150px;
+            height: 300px;
+            border-radius: 10px;
+            border: 5px solid goldenrod;
+            padding: 18px;
+            margin: 20px;
+            background-color: rgb(122, 192, 122);
+        }
+
+        button {
+            background-color: rgb(196, 156, 224);
+            font-weight: lighter;
+            font-size: 15;
+        }
+
+        .comments {
+            display: none;
+        }
+
+        .old{
+            background-color: lawngreen;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="filter">
+        <button class="new">New Sezon</button>
+        <button class="old">Old Sezon</button>
+    </div>
+
+    <ul class="educations">
+        <li class="education new" data-numara="5">
+            <h2>Music Education</h2>
+            <p>
+                Sound Development
+            </p>
+            <a href="#">Comments</a>
+            <ul class="comments">
+                <li>Excellent</li>
+                <li>Great</li>
+            </ul>
+            <button>Show Price</button>
+        </li>
+
+        <li class="education old" data-numara="10">
+            <h2>Music Education</h2>
+            <p>
+                Sound Development
+            </p>
+            <a href="#">Comments</a>
+            <ul class="comments">
+                <li>Excellent</li>
+                <li>Great</li>
+            </ul>
+            <button>Show Price</button>
+        </li>
+
+        <li class="education new" data-numara="5">
+            <h2>Music Education</h2>
+            <p>
+                Sound Development
+            </p>
+            <a href="#">Comments</a>
+            <ul class="comments">
+                <li>Excellent</li>
+                <li>Great</li>
+            </ul>
+            <button>Show Price</button>
+        </li>
+
+        <li class="education old" data-numara="10">
+            <h2>Music Education</h2>
+            <p>
+                Sound Development
+            </p>
+            <a href="#">Comments</a>
+            <ul class="comments">
+                <li>Excellent</li>
+                <li>Great</li>
+            </ul>
+            <button>Show Price</button>
+        </li>
+
+    </ul>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/alertifyjs/build/alertify.min.js"></script>
+    <script src="dmm.js"></script>
+
+
+
+
+</body>
+
+</html>

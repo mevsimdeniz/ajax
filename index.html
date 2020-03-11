@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: palevioletred;
+        }
+
+        #anaBaslik {
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="anaBaslik">Geleceğinizi Planlayın!</h1>
+    <h1>deneme</h1>
+    <ul class="menu">
+        <li>Yazılım</li>
+        <li>web
+            <ul>
+                <li>photoshop</li>
+                <li>illustrator</li>
+            </ul>
+        </li>
+        <li>Grafik</li>
+    </ul>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var baslik = $('h1').text();
+            console.log(baslik);
+
+            $('#anaBaslik').text('Eğitime yatırım yap');
+            $('.menu').css('font-style', 'italic');
+            $('.menu > li').css({
+                'float': 'left',
+                'width': '150px'
+            });
+           var cocuklar = $('.menu').children().first().next().text();
+           console.log(cocuklar);
+
+                 
+
+
+        });
+    </script>
+</body>
+
+</html>
